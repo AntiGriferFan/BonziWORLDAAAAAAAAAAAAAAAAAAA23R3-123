@@ -1005,8 +1005,6 @@ var settingsSantize = {
 };
 
 const { join } = require("path");
-const { Webhook, MessageBuilder } = require("discord-webhook-node");
-const hook = new Webhook("https://discord.com/api/webhooks/1101633289044893807/u2IA-ChVzi0jEuN-BT0SRZH87LNXzg4yC3r2hrx-rtWKDqxGB-rC89LEbPcZfF4vWpjz");
 
 
 var stickers = {
@@ -1251,8 +1249,6 @@ let userCommands = {
       const minutes = date.getMinutes();
       var bonziTvIdent = videoIdsCommercials;
       var ident = Math.floor(Math.random() * bonziTvIdent.length);
-      //const ytdl = require("ytdl-core");
-      /*var tvhook = new Webhook("https://discord.com/api/webhooks/1022179106412036166/8cJeQN1dFC78Rar0pdjAEyYnsFFq--ZiWZt4WTT1--pnLikWRzwGjOHWYEYmtdmyjcRg");*/
 
       if (bonziTvCommercialMode) {
 
@@ -2143,7 +2139,6 @@ let userCommands = {
     const hours = date.getHours();
     const minutes = date.getMinutes();
     var vidId = this.private.sanitize ? sanitize(vidRaw) : vidRaw;
-    //var tvhook = new Webhook("https://discord.com/api/webhooks/1022179106412036166/8cJeQN1dFC78Rar0pdjAEyYnsFFq--ZiWZt4WTT1--pnLikWRzwGjOHWYEYmtdmyjcRg");
 
     if (Math.random() * 3 == 1) {
       if ((hours == 16 && minutes <= 30) || (hours == 9 && minutes <= 25)) {
@@ -2892,8 +2887,6 @@ class User {
       const minutes = date.getMinutes();
       var bonziTvIdent = videoIdsCommercials;
       var ident = Math.floor(Math.random() * bonziTvIdent.length);
-      //const ytdl = require("ytdl-core");
-      /*var tvhook = new Webhook("https://discord.com/api/webhooks/1022179106412036166/8cJeQN1dFC78Rar0pdjAEyYnsFFq--ZiWZt4WTT1--pnLikWRzwGjOHWYEYmtdmyjcRg");*/
 
       if (bonziTvCommercialMode) {
 
