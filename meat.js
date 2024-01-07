@@ -1699,7 +1699,7 @@ let userCommands = {
         "i post juny&tony and now people are calling me a JunyTonytard",
         "Hi i am Hogi and i am obsessed with nursery rhymes that i accuse random people of being a supporter of me and my fans and i am also with pinkfong and also like to post nursery rhyme shit.",
 	"Hi i am Baby Shark and i am obsessed with my own song that i accuse random people of being my fan and also like to do baby shark-related shits by pinkfong.",
-	"hi i am some fatass named flooder master and i am obsessed with some floodings that i accuse random people of getting flooded and also like to use JS scripts to flood bonziworld server shits."
+	"hi i am some fatass named flooder master and i am obsessed with some floodings that i accuse random people of getting flooded and also like to use JS scripts to flood bonziworld server shits.",
 	"i keep flooding bonziworld servers like forever now",
 	`SpongeBob SquarePants sucks- NO! It does not suck, you idiotic "SpongeBob" hater!`,
 	"i destroy bonziworld 2 and now i got hate",
