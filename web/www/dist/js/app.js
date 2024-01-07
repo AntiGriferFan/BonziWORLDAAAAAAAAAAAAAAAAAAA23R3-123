@@ -3331,7 +3331,8 @@ $(function () {
             "impersonation": "Impersonation is prohibited!",
             "cooldown": "You're on cooldown, you can't join a room for 25 seconds!",
             "unknown": "An unknown error has occured, please try again.",
-            "TooMany": "You're already logged in!"
+            "namePinkFong": "Hey! Why PinkFong? I hate him. He's responsible for posting and making nursery rhyme shit (one example was The Potty Song). Don't love him, hate him or despite him if you are a PinkFong hater. Screw you, PinkFong.",
+	    "nameHogi": "Okay why Hogi now? I hate her. Like Pinkfong himself, she's responsible for the purpose of nursery rhymes. And nursery rhymes suck. And Hogi, if you keep posting nursery rhyme shits, you will be nothing but a skid, for good. Fuck you Hogi, get a fuckin' life."
         };
         $("#login_card").show(),
         $("#login_load").hide(),
