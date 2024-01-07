@@ -486,7 +486,6 @@ var Bonzi = (function () {
 								this.userPublic.a.pause();
 							}
 							try {
-                                                                BonziHandler.stop(this.speakID);
 								this.voiceSource.stop();
 							} catch (e) {}
                     },
