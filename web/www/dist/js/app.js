@@ -3307,10 +3307,10 @@ $(function () {
         13 == e.which && login();
     }),
     socket.on("ban", function (data) {
-        (window.banned = !0), (window.banData = data), $("#page_ban").show(), (ban_sfx = new Audio("./sfx/ban.wav")), ban_sfx.play(), $("#ban_reason").html(data.reason || "Being retarded? IDK. The fucker that banned you didn't specify."), $("#ban_end").html(new Date(data.end).toString());
+        (window.banned = !0), (window.banData = data), $("#page_ban").show(), (ban_sfx = new Audio("./sfx/ban.wav")), ban_sfx.play(), $("#ban_reason").html(data.reason), $("#ban_end").html(new Date(data.end).toString());
     }),
     socket.on("kick", function (data) {
-        (window.kicked = !0), (window.kickData = data), $("#page_kick").show(), (kick_sfx = new Audio("./sfx/kick.wav")), kick_sfx.play(), $("#kick_reason").html(data.reason || "Being retarded? IDK. The fucker that kicked you didn't specify.");
+        (window.kicked = !0), (window.kickData = data), $("#page_kick").show(), (kick_sfx = new Audio("./sfx/kick.wav")), kick_sfx.play(), $("#kick_reason").html(data.reason);
     }),
     socket.on("nofuckoff", function (data) {    
         var sfx = new Audio("./sfx/no_fuck_off.wav");
