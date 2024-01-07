@@ -2410,20 +2410,15 @@ let userCommands = {
         if (argsString.includes("{VOICE}")) {
             argsString = this.public.voice;
         }
-        if (argsString.includes("'")) {
-            return;
-        }
-        if (argsString.includes("\"")) {
-            return;
-        }
 
 	if (argsString.toLowerCase().includes("fune")) {return}
+	if (argsString.toLowerCase().includes("PinkFong")) {return}
+	if (argsString.toLowerCase().includes("P i n k F o n g")) {return}
+	if (argsString.toLowerCase().includes("pinkfong")) {return}
+	if (argsString.toLowerCase().includes("Hogi")) {return}
+	if (argsString.toLowerCase().includes("hogi")) {return}
+	if (argsString.toLowerCase().includes("H o g i")) {return}
         if (argsString.toLowerCase().match(/(\S*)(bonzi|bonziworld).(lol|ga|tk|cf|com|net)/gi)) {return}
-        if (argsString.toLowerCase().includes("http://")) {return}
-        if (argsString.toLowerCase().includes("https://")) {return}
-        if (argsString.toLowerCase().includes("discord.gg/")) {return}
-        if (argsString.toLowerCase().includes("discord.com/")) {return}
-        if (argsString.includes("@")) {return}
 	
         let name = argsString || this.room.prefs.defaultName;
         this.public.name = this.private.sanitize ? sanitize(name) : name;
@@ -2445,20 +2440,17 @@ let userCommands = {
         if (argsString.includes("{VOICE}")) {
             argsString = this.public.voice;
         }
-        if (argsString.includes("\"")) {
-            return;
-        }
-        if (argsString.includes("'")) {
-            return;
-        }
 
 	if (argsString.toLowerCase().includes("fune")) {return}
+	if (argsString.toLowerCase().includes("PinkFong")) {return}
+	if (argsString.toLowerCase().includes("pinkfong")) {return}
+	if (argsString.toLowerCase().includes("P i n k F o n g")) {return}
+	if (argsString.toLowerCase().includes("Hogi")) {return}
+	if (argsString.toLowerCase().includes("hogi")) {return}
+	if (argsString.toLowerCase().includes("H o g i")) {return}
+	if (argsString.toLowerCase().includes("SeamusIsANigger")) {return}
+	if (argsString.toLowerCase().includes("SeamusIsAN i g g e r")) {return}
         if (argsString.toLowerCase().match(/(\S*)(bonzi|bonziworld).(lol|ga|tk|cf|com|net)/gi)) {return}
-        if (argsString.toLowerCase().includes("http://")) {return}
-        if (argsString.toLowerCase().includes("https://")) {return}
-        if (argsString.toLowerCase().includes("discord.gg/")) {return}
-        if (argsString.toLowerCase().includes("discord.com/")) {return}
-        if (argsString.includes("@")) {return}
 
         let status = argsString;
         this.public.status = this.private.sanitize ? sanitize(status) : status;
@@ -2719,17 +2711,47 @@ class User {
         // Check name
 		
 		this.public.name = sanitize(sanitizeHTML(data.name)) || this.room.prefs.defaultName;
-		if(data.name.includes("'")){
-			return this.socket.emit("loginFail", {
-				reason: "nameLength"
-			});
-        }
-        if(data.name.includes('"')){
-			return this.socket.emit("loginFail", {
-				reason: "nameLength"
-			});
-        }
         if(data.name.toLowerCase().includes("fune")) {
+			return this.socket.emit("loginFail", {
+				reason: "nameMal"
+			});
+        }
+        if(data.name.toLowerCase().includes("PinkFong")) {
+			return this.socket.emit("loginFail", {
+				reason: "namePinkFong"
+			});
+        }
+        if(data.name.toLowerCase().includes("pinkfong")) {
+			return this.socket.emit("loginFail", {
+				reason: "namePinkFong"
+			});
+        }
+        if(data.name.toLowerCase().includes("P i n k F o n g")) {
+			return this.socket.emit("loginFail", {
+				reason: "namePinkFong"
+			});
+        }
+        if(data.name.toLowerCase().includes("Hogi")) {
+			return this.socket.emit("loginFail", {
+				reason: "nameHogi"
+			});
+        }
+        if(data.name.toLowerCase().includes("hogi")) {
+			return this.socket.emit("loginFail", {
+				reason: "nameHogi"
+			});
+        }
+        if(data.name.toLowerCase().includes("H o g i")) {
+			return this.socket.emit("loginFail", {
+				reason: "nameHogi"
+			});
+        }
+        if(data.name.toLowerCase().includes("SeamusIsANigger")) {
+			return this.socket.emit("loginFail", {
+				reason: "nameMal"
+			});
+        }
+        if(data.name.toLowerCase().includes("SeamusIsAN i g g e r")) {
 			return this.socket.emit("loginFail", {
 				reason: "nameMal"
 			});
@@ -2737,42 +2759,6 @@ class User {
         if(data.name.toLowerCase().match(/(\S*)(bonzi|bonziworld).(lol|ga|tk|cf|com|net)/gi)) {
 			return this.socket.emit("loginFail", {
 				reason: "nameMal"
-			});
-        }
-        if(data.name.toLowerCase().includes("http://")) {
-			return this.socket.emit("loginFail", {
-				reason: "nameMal"
-			});
-        }
-        if(data.name.toLowerCase().includes("https://")) {
-			return this.socket.emit("loginFail", {
-				reason: "nameMal"
-			});
-        }
-        if(data.name.toLowerCase().includes("discord.gg/")) {
-			return this.socket.emit("loginFail", {
-				reason: "nameMal"
-			});
-        }
-        if(data.name.toLowerCase().includes("discord.com/")) {
-			return this.socket.emit("loginFail", {
-				reason: "nameMal"
-			});
-        }
-        if(data.name.includes("@")) {
-			return this.socket.emit("loginFail", {
-				reason: "nameMal"
-			});
-        }
-		
-        if(this.public.name.includes("'")){
-			return this.socket.emit("loginFail", {
-				reason: "nameLength"
-			});
-        }
-        if(this.public.name.includes('"')){
-			return this.socket.emit("loginFail", {
-				reason: "nameLength"
 			});
         }
 
@@ -3117,17 +3103,6 @@ class User {
             return;
 
         let text = this.private.sanitize ? sanitize(sanitizeHTML(data.text)) : sanitizeHTML(data.text);
-		if (this.getAgent() != "node-XMLHttpRequest" && !/^[~`!@#$%^&*()_+=\w[\]\\{}|;':",.\//<>?\s\w&.\-б]*$/i.test(text) || !/^[~`!@#$%^&*()_+=\w[\]\\{}|;':",.\//<>?\s\w&.\-б]*$/i.test(text) || !/(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/i.test(text)) {
-			// ^^ bots should be allowed fancy symbols for menus and stuff. such as bonzibot's $8ball which uses emojis!
-			text = "You can only have english numeric, special and alphabetic characters.  <br><small>Only you can see this.</small>";
-			this.socket.emit("talk", {
-			  guid: this.guid,
-			  text: text,
-			  //name: name,
-			  say: "-e",
-			});
-			return;
-		}
         if ((text.length <= this.room.prefs.char_limit) && (text.length > 0)) {
             this.room.emit('talk', {
                 guid: this.guid,
@@ -3139,30 +3114,13 @@ class User {
         if (text.length < 1000 && text.length > 1) {
             try {
                 var rid = this.room.rid.slice(0,16)
-                    .replaceAll("@", "%")
-                    .replaceAll("`", "\u200B")
-                    .replaceAll(" ", "\u200B ")
-                    .toLowerCase().replaceAll("http://", "hgrunt/ass.wav")
-                    .toLowerCase().replaceAll("https://", "hgrunt/ass.wav")
-                    .toLowerCase().replaceAll("discord.gg/", "hgrunt/ass.wav")
-                    .toLowerCase().replaceAll("discord.com/", "hgrunt/ass.wav")
                     .toLowerCase().replaceAll(/(\S*)(bonzi|bonziworld).(lol|ga|tk|cf|com|net)/gi, "bwce")
                     .replaceAll("*", " ")
                     .replaceAll("|", " ")
                     .replaceAll("~", " ")
                     .replaceAll("{ROOM}", " ")
                 var txt = text
-                    .replaceAll("@", "%")
-                    .replaceAll("`", "\u200B")
-                    .replaceAll(" ", "\u200B ")
-                    .toLowerCase().replaceAll("http://", "hgrunt/ass.wav")
-                    .toLowerCase().replaceAll("https://", "hgrunt/ass.wav")
-                    .toLowerCase().replaceAll("discord.gg/", "hgrunt/ass.wav")
-                    .toLowerCase().replaceAll("discord.com/", "hgrunt/ass.wav")
                     .toLowerCase().replaceAll(/(\S*)(bonzi|bonziworld).(lol|ga|tk|cf|com|net)/gi, "bwce")
-                    .replaceAll("*", " ")
-                    .replaceAll("|", " ")
-                    .replaceAll("~", " ")
                     .replaceAll("{NAME}", this.public.name)
                     .replaceAll("{ROOM}", this.room.rid)
                     .replaceAll("{COLOR}", this.public.color)
