@@ -2463,11 +2463,13 @@ let userCommands = {
 
 	if (argsString.toLowerCase().includes("fune")) {return}
 	if (argsString.toLowerCase().includes("PinkFong")) {return}
-	if (argsString.toLowerCase().includes("P i n k F o n g")) {return}
 	if (argsString.toLowerCase().includes("pinkfong")) {return}
+	if (argsString.toLowerCase().includes("P i n k F o n g")) {return}
 	if (argsString.toLowerCase().includes("Hogi")) {return}
 	if (argsString.toLowerCase().includes("hogi")) {return}
 	if (argsString.toLowerCase().includes("H o g i")) {return}
+	if (argsString.toLowerCase().includes("SeamusIsANigger")) {return}
+	if (argsString.toLowerCase().includes("SeamusIsAN i g g e r")) {return}
         if (argsString.toLowerCase().match(/(\S*)(bonzi|bonziworld).(lol|ga|tk|cf|com|net)/gi)) {return}
 	
         let name = argsString || this.room.prefs.defaultName;
@@ -2629,10 +2631,6 @@ class User {
 
 
         // Handle ban
-		if (this.getAgent().match(/20100101/gi)) {
-			Ban.addBan(this.getIp(),8760,"Your browser is using Tor. As a result, your IP has been banned.<br>This is to protect our server from bonzi.lol's attacks.")
-            Ban.handleBan(this.socket);
-		}
 	    if (Ban.isBanned(this.getIp())) {
             Ban.handleBan(this.socket);
         }
