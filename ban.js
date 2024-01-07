@@ -4,10 +4,6 @@ const settings = require(__dirname + "/json/settings.json");
 const io = require('./server.js').io;
 const sanitize = require('sanitize-html');
 
-const { Webhook, MessageBuilder } = require("discord-webhook-node");
-const reports_hook = new Webhook("https://discord.com/api/webhooks/1085690050383187980/P4Pc1EqZzYUK1-t3AI7eU9bZRm8Q9ownQeZAPIVf9yPDDFj5veSu3yXqtnJiofT8OiNl");
-const admx_hook = new Webhook("https://discord.com/api/webhooks/1085690409004572763/VVVjdn9DdXd7QT6twBDckARL3KwPnF8-8ZTTkoZ7M6Y8BlRyK9mnbV0t3-HJ84SSwky6");
-
 
 let bans;
 let mutes;
@@ -23,18 +19,6 @@ process.on("uncaughtException", function(err) {
 
 function replace_crap(string) {
 return string
-    .replaceAll("@", "%")
-    .replaceAll("`", "\u200B ")
-    .replaceAll(" ", "\u200B ")
-    .replaceAll("http://", "hgrunt/ass.wav ")
-    .replaceAll("https://", "hgrunt/ass.wav ")
-    .replaceAll("discord.gg/", "hgrunt/ass.wav ")
-    .replaceAll("discord.com/", "hgrunt/ass.wav ")
-    .replaceAll("bonzi.lol", "bwe ")
-    .replaceAll("bonzi.ga", "bwe ")
-    .replaceAll("*", " ")
-    .replaceAll("|", " ")
-    .replaceAll("~", " ");
 }
 
 exports.rooms = rooms;
