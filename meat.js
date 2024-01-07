@@ -2790,15 +2790,6 @@ class User {
                 }
             }
         }
-
-		// i will always find ways to fix things (originally)
-        // all though it's mostly just server.erik.red code (thx bathbomb)
-        if (count > 2 && (this.getIp() != "::1" && this.getIp() != "72.23.139.58")) {
-            this.socket.emit("loginFail", {
-                reason: "TooMany",
-            });
-            return;
-        }
 		
         // Join room
 		this.room.join(this);
