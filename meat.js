@@ -1502,7 +1502,6 @@ let userCommands = {
             this.socket.emit('alert',{title:'Error 404',msg:'That sticker doesn\'t exist.',button:"Ok"});
         }
     },
-/*
     wtf: function (text) {
         var wtf = [
             "i cut a hole in my computer so i can fuck it",
@@ -1651,7 +1650,75 @@ let userCommands = {
             "i post babytv and now people are calling me a babytvtard",
             "i post sf08 news and now i got hate",
             "i listen to spongebob theme song and now i got hate",
-			"What the fuck did you just fucking say about me, you little bitch? I'll have you know I graduated top of my class in the Navy Seals, and I've been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed kills. I am trained in gorilla warfare and I'm the top sniper in the entire US armed forces. You are nothing to me but just another target. I will wipe you the fuck out with precision the likes of which has never been seen before on this Earth, mark my fucking words. You think you can get away with saying that shit to me over the Internet? Think again, fucker. As we speak I am contacting my secret network of spies across the USA and your IP is being traced right now so you better prepare for the storm, maggot. The storm that wipes out the pathetic little thing you call your life. You're fucking dead, kid. I can be anywhere, anytime, and I can kill you in over seven hundred ways, and that's just with my bare hands. Not only am I extensively trained in unarmed combat, but I have access to the entire arsenal of the United States Marine Corps and I will use it to its full extent to wipe your miserable ass off the face of the continent, you little shit. If only you could have known what unholy retribution your little 'clever' comment was about to bring down upon you, maybe you would have held your fucking tongue. But you couldn't, you didn't, and now you're paying the price, you goddamn idiot. I will shit fury all over you and you will drown in it. You're fucking dead, skiddo."
+			"What the fuck did you just fucking say about me, you little bitch? I'll have you know I graduated top of my class in the Navy Seals, and I've been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed kills. I am trained in gorilla warfare and I'm the top sniper in the entire US armed forces. You are nothing to me but just another target. I will wipe you the fuck out with precision the likes of which has never been seen before on this Earth, mark my fucking words. You think you can get away with saying that shit to me over the Internet? Think again, fucker. As we speak I am contacting my secret network of spies across the USA and your IP is being traced right now so you better prepare for the storm, maggot. The storm that wipes out the pathetic little thing you call your life. You're fucking dead, kid. I can be anywhere, anytime, and I can kill you in over seven hundred ways, and that's just with my bare hands. Not only am I extensively trained in unarmed combat, but I have access to the entire arsenal of the United States Marine Corps and I will use it to its full extent to wipe your miserable ass off the face of the continent, you little shit. If only you could have known what unholy retribution your little 'clever' comment was about to bring down upon you, maybe you would have held your fucking tongue. But you couldn't, you didn't, and now you're paying the price, you goddamn idiot. I will shit fury all over you and you will drown in it. You're fucking dead, skiddo.",
+          "Fune: BANZI.LEL BEST SERVA!",
+          "PinkFong: PANK FUNG BEST CHENNAL!",
+          "Hogi: HO-GEE BEST CHENNAL!",
+          "Baby Shark Brooklyn: BEBY SHARK BRUKKLYN BEST CHENNAL!",
+          "i support fune",
+          "i support pinkfong",
+          "i support hogi",
+          "i support baby shark brooklyn",
+          "bonzi.lol is the best site ever!",
+          "Pinkfong is the best channel ever!",
+          "Hogi is the best channel ever!",
+          "Bebefinn is the best channel ever!",
+          "Baby Shark Broolyn is the best channel ever!",
+          "seamus is a pe- NO YOU FUCKING DON'T!",
+          "seamus is a nig- NO YOU FUCKING DON'T!",
+          "bonzipedia is the best wiki ever",
+          "baby shark is the best song ever",
+          "The Potty Song is the best song ever",
+          "Hello my name is fune and i am obsessed with pedos and groomers so much that i accuse random people of being a pedo and a groomer without any proof and also like to make fake screenshots out of them doing disgusting shit.",
+          "Hello my name is pinkfong and i am obsessed with baby shark, nursery rhymes and the potty song so much that i accuse random people of being a pinkfong fan and a nursery rhyme supporter and also like to make nursery rhyme song shit.",
+          "I LIKE PINKFONG! ALSO HOGI IS A THE BEST!!!! I HATE PINKFONG HATERS!!! PINKFONG IS THE BEST!!!!!",
+          "I LIKE FUNE! ALSO NANO IS A THE BEST!!!! I HATE OTHER BONZIWORLD SITES!!! BONZI DOT LOL IS A THE BEST!!!!!",
+          "THE POTTY SONG IS THE BEST!",
+          'i keep watching the potty song like forever now. "How do I use a potty?" ',
+          "choccy milk is good",
+          "My name is goober and i'm totally not a spy!",
+          "bonziworld gave me ptsd",
+          "you got trolled!",
+          "PURGE! PURGE! DESTROY ALL NEW YEARS! I HATE 2021 SO MUCH! PURGE!",
+          "I actually believe in fune's false allegations",
+          "Lambda Fortress Community Edition is so good that it's better than this shid site",
+          "I AM NOT KID",
+          "WE'RE GONNA BEAT YA TO DEATH",
+            "i support juny and tony",
+        "JunyTony: JOONEE-TONEE BEST CHENNAL!",
+        "Bebefinn: BEYBEYFYNN BEST CHENNAL!",
+        "i want to live in a foxs butthole",
+        "i post baby shark and now people are calling me a babysharktard",
+        "i post pinkfong wash your hands and now i got hate",
+        "i post i got banned on bonziworld revived and now i got hate",
+        "i abuse javascript and now i got hate",
+        "i used losky virus and now i got hate",
+        "i post baby einstein and now people are calling me a babyeinsteintard",
+        "i post Baby Einstein Caterpillar logo and now people are calling me a Baby EinsteinTard", // BonziUSER is the Baby Einstein enthusiast lol
+	"i post lol sparta and now people are calling me a spartaremixtard",
+        "i post juny&tony and now people are calling me a JunyTonytard",
+        "Hi i am Hogi and i am obsessed with nursery rhymes that i accuse random people of being a supporter of me and my fans and i am also with pinkfong and also like to post nursery rhyme shit.",
+	"Hi i am Baby Shark and i am obsessed with my own song that i accuse random people of being my fan and also like to do baby shark-related shits by pinkfong.",
+	"hi i am some fatass named flooder master and i am obsessed with some floodings that i accuse random people of getting flooded and also like to use JS scripts to flood bonziworld server shits."
+	"i keep flooding bonziworld servers like forever now",
+	`SpongeBob SquarePants sucks- NO! It does not suck, you idiotic "SpongeBob" hater!`,
+	"i destroy bonziworld 2 and now i got hate",
+	"i post pinkfong potty training song and now i got hate",
+	"i post pinkfong don't hold it in and now i got hate",
+	"i post pinkfong it's poo poo time and now i got hate",
+	"i post poo poo song by yearimTV and now i got hate",
+	"i post bonzi.lol content and now i got hate",
+        'PASSpie999forU doesnt work help',
+        'i like to drink water from an unflushed toilet',
+        'im not racist but i hate black people',
+        'no homo but you wanna have gay sex?',
+        'i mute everyone so they cant talk',
+        'i like images where furries fart in a bathtub to make bubbles',
+        '(after having sex with mother) I am no mamas boy, she made me a mamas man.',
+        'nigger fuck shit bitch sex ass dick tit cunt porn haha i can offend You',
+        'i love it when my crush forgets to flush the toilet so i can put her poop in my asshole',
+	'i use collaborative virtual machine to install malware',
+	"i post baby shark's potty song and now i got hate"
         ];
         var num = Math.floor(Math.random() * wtf.length);
         this.room.emit("talk", {
@@ -1663,7 +1730,6 @@ let userCommands = {
             guid: this.guid,
         });
     },
-*/
     "youtube": function(vidRaw) {
         if (vidRaw.includes("\"")) {return};
         if (vidRaw.includes("'")) {return};
@@ -1890,7 +1956,6 @@ let userCommands = {
     acid: function () {
         this.socket.emit("acid");
     },
-	/*
     kick: function (data) {
         if (this.private.runlevel < 3) {
             this.socket.emit("alert", "This command requires administrator privileges");
@@ -1927,24 +1992,14 @@ let userCommands = {
                     target = n;
                 }
             });
-            if (target.getIp() == "::1") {
-                Ban.removeBan(target.getIp());
-            } else if (target.getIp() == "::ffff:127.0.0.1") {
-                Ban.removeBan(target.getIp());
-            } else {
-                if (target.private.runlevel > 2 && this.getIp() != "::1" && this.getIp() != "::ffff:127.0.0.1") {
-                    return;
-                }
-                Ban.addBan(target.getIp(), 24 * 3600, "You got banned.");
                 target.socket.emit("ban", {
-                    reason: data.reason,
+                    reason: "You got banned,",
                 });
                 target.disconnect();
-            }
         } else {
             this.socket.emit("alert", "The user you are trying to ban left. Get dunked on nerd");
         }
-    },*/
+    },
 	"unban": function(ip) {
         if (this.private.runlevel < 3) {
             this.socket.emit("alert", "This command requires administrator privileges");
