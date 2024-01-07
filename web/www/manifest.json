@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "BonziWORLD - Enhanced",
-  "short_name": "BWE",
+  "name": "BonziWORLD Community Edition",
+  "short_name": "BWCE",
   "description": "Welcome to BonziWORLD! The official revival of BonziWORLD.com! Join with other bonzibuddies to chat, record, watch videos and many other fun stuff.",
   "icon": [{
     "src": "./icon/icon-128x128.png",
