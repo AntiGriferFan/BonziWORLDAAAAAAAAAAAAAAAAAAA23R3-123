@@ -322,7 +322,6 @@ var Bonzi = (function () {
 											return !admin
 										},
 										items: {
-											/*
 											kick: {
 												name: function() {
 													return admin ? "🔨 Kick" : ""
@@ -347,7 +346,6 @@ var Bonzi = (function () {
 													socket.emit("command", {list: ["nofuckoff", _this2.id]})
 												}
 											},
-											*/
 											givepopeto: {
 												disabled: function() {
 													return !admin
@@ -488,6 +486,7 @@ var Bonzi = (function () {
 								this.userPublic.a.pause();
 							}
 							try {
+                                                                BonziHandler.stop(this.speakID);
 								this.voiceSource.stop();
 							} catch (e) {}
                     },
@@ -720,7 +719,6 @@ var Bonzi = (function () {
 								}
 
                             } else {
-                                /*
                                   if (this.color === "merlin" || this.color === "clippy") {
 
                                 	this.userPublic.a = new Audio("https://www.tetyys.com/SAPI4/SAPI4?text=" + encodeURIComponent(say) + "&voice=Adult%20Male%20%233%2C%20American%20English%20(TruVoice)&pitch=" + Math.max(Math.min(parseInt(this.userPublic.pitch), 400), 50) + "&speed=" + Math.max(Math.min(parseInt(this.userPublic.speed), 250), 50) + "");
@@ -746,7 +744,6 @@ var Bonzi = (function () {
                                 	this.userPublic.a = new Audio("https://www.tetyys.com/SAPI4/SAPI4?text=" + encodeURIComponent(say) + "&voice=Adult%20Male%20%232%2C%20American%20English%20(TruVoice)&pitch=" + Math.max(Math.min(parseInt(this.userPublic.pitch), 400), 50) + "&speed=" + Math.max(Math.min(parseInt(this.userPublic.speed), 250), 50) + "");
 
                                   }
-                                */
                                 if (this.userPublic.voice == "broken") {
                                     var say2 = say.replaceAll(/ /gi, "' ").replaceAll(/'s/gi, " s").replaceAll(/]]/gi, "")
                                     speak.play("[['" + say2, {
@@ -936,39 +933,6 @@ var Bonzi = (function () {
                         $('.bonzi_status:empty').css("display", "none");
                     },
                 },
-                // you make too many errors
-                /*{
-                    key: "youtube",
-                    value: function (vid) {
-                        var self = this;
-                        if (!this.mute) {
-                            var ytSize = { w: 480, h: 270 },
-                                thisDialogId = s4(),
-                                vcid = `bz-${self.id}-yt-v`;
-                            self.$dialog.addClass("bubble_autowidth"),
-                            self.$dialog.css("border-radius", "4px"),
-                                self.$dialogCont.html(`<div id="${vcid}"></div>`),
-                                (self.player = new YT.Player(vcid, {
-                                    height: ytSize.h,
-                                    width: ytSize.w,
-                                    videoId: vid,
-                                    host: `${window.location.protocol}//www.youtube.com`,
-                                    playerVars: { autoplay: 1, widgetid: 1, playsinline: 0, modestbranding: 1, controls: 2, origin: `${window.location.origin}` },
-                                    events: {
-                                        onReady: function (event) {
-                                            (self.openDialogId = String(thisDialogId)), self.$dialog.show(200);
-                                        },
-                                        onStateChange: function (event) {
-                                            switch (event.data) {
-                                                case 0:
-                                                    self.clearDialog(thisDialogId, !1);
-                                            }
-                                        },
-                                    },
-                                }));
-                        }
-                    },
-                },*/
                 {
                     key: "youtube",
                     value: function (vid) {
@@ -2454,6 +2418,7 @@ function loadBonzis(callback) {
 document.addEventListener("contextmenu", function (key){
     key.preventDefault();
 }, false);
+/*
 // "disable" devtools.  fuck off bozoworlders!
 $(document).keydown(function(key) {
     if (window.location.hostname.includes("localhost") || enable_skid_protect != true || admin != false) return;
@@ -2504,6 +2469,7 @@ $(document).keydown(function(key) {
 		window.addEventListener('blur', detectDevTool);
 	}
 }();
+*/
 
 
 function bonziAlert(obj){
@@ -2574,10 +2540,6 @@ function Load() {
 	}, 100));
 }
 function login() {
-	if($("#login_name").val().includes("\"") === true) { return $("#page_skiddie").show() && socket.disconnect() && $("#page_error").hide() }
-	if($("#login_name").val().includes("'") === true) { return $("#page_skiddie").show() && socket.disconnect() && $("#page_error").hide() }
-	if($("#login_name").val().includes("&") === true) { return $("#page_skiddie").show() && socket.disconnect() && $("#page_error").hide() }
-	if($("#login_name").val().includes("#") === true) { return $("#page_skiddie").show() && socket.disconnect() && $("#page_error").hide() }
 	Bonzi_Name = $("#login_name").val() || "Anonymous";
 	var login_sfx = new Audio("./sfx/logon.wav");
     setTimeout(function () {socket.emit("login", { name: $("#login_name").val(), room: $("#login_room").val() }), bzSetup()}, 954);
