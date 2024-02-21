@@ -1711,7 +1711,7 @@ let userCommands = {
         'i mute everyone so they cant talk',
         'i like images where furries fart in a bathtub to make bubbles',
         '(after having sex with mother) I am no mamas boy, she made me a mamas man.',
-        'nigger fuck shit bitch sex ass dick tit cunt porn haha i can offend You',
+        'nigger fuck shit bitch sex ass dick tit cunt porn haha i can offend You', //offensive racial slur
         'i love it when my crush forgets to flush the toilet so i can put her poop in my asshole',
 	'i use collaborative virtual machine to install malware',
 	"i post baby shark's potty song and now i got hate"
@@ -1989,7 +1989,7 @@ let userCommands = {
                 }
             });
                 target.socket.emit("ban", {
-                    reason: "You got banned,",
+                    reason: "You got banned.",
                 });
                 target.disconnect();
         } else {
