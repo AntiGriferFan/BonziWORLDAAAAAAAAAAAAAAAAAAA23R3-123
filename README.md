@@ -20,7 +20,7 @@ The source code has been made public because I would like to move on from this p
 ### License & Copyright
 MIT
 
-Copyright (c) 2024 ICC
+Copyright (c) 2024 Chace
 
 
 <hr>
